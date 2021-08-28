@@ -1,11 +1,17 @@
 print()
-print("""                   ____   ___  ____  
-   ___  ___  _ __ |  _ \ / _ \/ ___| 
-  / _ \/ _ \| '_ \| | | | | | \___ \ 
- |  __/ (_) | |_) | |_| | |_| |___) |
-  \___|\___/| .__/|____/ \___/|____/ 
-            |_|                      
-""")
+print("""
+         ███████   ███      ███            ███████    ███████  
+        ████  ████ ███      ███          ████   ████ ████  ████
+        ███    ███ ███                   ███     ███ ████      
+        ███        ██████   ███ ██████   ███     ███  ███████   
+        ███        ███  ███ ███ ███  ███ ███     ███     █████ 
+        ███    ███ ███  ███ ███ ███  ███ ███     ███        ███
+        ████  ████ ███  ███ ███ ███ ████ ████   ████ ████  ████ 
+          ██████   ███  ███ ███ ██████     ███████     ██████
+                                ███                             
+                                ███                             
+                                ███                             
+        """)
 print()
 import time
 from random import *
@@ -19,7 +25,7 @@ def loading_bar(char, n, start_msg,end_msg):
         time.sleep(randint(0,1))
     print("|")
     print(end_msg)
-loading_bar("\u2593",15,"Starting: ","OS has been successfully loaded.")
+loading_bar("\u2593",15,"Starting: ","ChipOS has successfully loaded.")
 init_time = randint(1,3)
 time.sleep(init_time)
 files_U = 0
@@ -55,7 +61,7 @@ def print_dir_drive():
         print("Volume in drive C is", (disk_label))
     print("Volume Serial Number is 8J12-UNDE")
     print(" Name                 Size")
-    print("eopDOS_v0.4.py        20,480B")
+    print("ChipOS                20,480B")
     print("Apps                  2,020B")
     print("Users                 ", (1010+((notepad_fileNum) * 58)),"B",sep="")
     print("Files: 1")
@@ -71,23 +77,12 @@ def print_dir_drive():
 
 #FLOPPY DISK SYSTEM
 def floppyDriveSystem():
-    print("eopDrive System v1.0a")
+    print("ChipOS filesystem v1.0a")
     print("Type 'exit' to exit.")
     while True:
         floppy_in = input("FLOPPYDRIVE>")
-        if floppy_in == 'calculator':
-            exec(open('calculator.py').read())
-            print()
-        elif floppy_in == 'pymark':
-            exec(open('pymark.py').read())
-        elif floppy_in == 'diskutil':
-            exec(open('diskutil.py').read())
-        elif floppy_in == 'help':
-            print("Type in a program name to insert a disk.")
-            print("Type 'exit' to exit.")
-            print()
-        elif floppy_in == 'info':
-            print("eopVFloppyDrive-M01")
+        if floppy_in == floppy_in:
+            exec(open(floppy_in).read())
             print()
         elif floppy_in == 'exit':
             print()
@@ -154,7 +149,7 @@ if statement_placer == 0:
     try:
         print("Checking key...")
         time.sleep(1)
-        file = open("eopDOS-key.txt", "r")
+        file = open("ChipOS-key.txt", "r")
         fileRead = (file.read())
         if fileRead == '5k8r!2T@J90(7{]ad&31f1adD1%&*^&s!Qa,c.L':
             print("Correct key.")
@@ -171,7 +166,7 @@ if statement_placer == 0:
         time.sleep(4)
         exit()
 cls()
-print("eopDOS v0.4 on", (sys.platform))
+print("ChipOS v0.1", (sys.platform))
 print("""Type "help", "credits", or "license" for more information.""")
 print("")
 while True:
@@ -199,7 +194,7 @@ while True:
         print("Checking for updates...")
         time.sleep(0.8)
         print("No updates avaliable.")
-        print("Last updated 09/17/2020")
+        print("Last updated 18/08/2021")
         print("")
     elif cmd == 'credits':
         print("All work done by eyx")
@@ -207,7 +202,7 @@ while True:
     elif cmd == 'license':
         print("MIT License")
         print("")
-        print("Copyright (c) 2020 eyx")
+        print("Copyright (c) 2021 Squirrel Computers")
         print("")
         print("Permission is herby granted, free of charge, to any person obtaining a copy")
         print("""of this software and associated documentation files (the "Software"), to deal""")
@@ -334,7 +329,7 @@ while True:
             print("")
     elif cmd == 'cmd':
         cls()
-        print("eopDOS v0.4")
+        print("ChipOS v0.1")
         print("""Type "help", "credits", or "license" for more information.""")
         print("")
         dir0 = r"C:\Local User>"
@@ -345,40 +340,7 @@ while True:
             chkdsk_r()
         elif cmd[7:] == '/f':
             chkdsk_f()
-    elif cmd[0:4] == 'ping':
-        ping = cmd[5:]
-        print("Ping request could not find host", ping, ". Please check the name and try again.")
-        print("")
-    elif cmd == 'ipconfig':
-        print("")
-        print("eopDOS IP Configuration")
-        print("")
-        print("")
-        print("Ethernet adapter Ethernet")
-        print("")
-        print("   Media State . . . . . . . . . . . : Media disconnected")
-        print("   Connection-specific DNS Suffix  . : VRZN-NT320")
-        print("")
-        print("Wireless LAN adapter Local Area Connection* 2:")
-        print("")
-        print("   Media State . . . . . . . . . . . : Media disconnected")
-        print("   Connection-specific DNS Suffix  . :")
-        print("")
-        print("Wireless LAN adapter Local Area Connection* 3:")
-        print("")
-        print("   Media State . . . . . . . . . . . : Media disconnected")
-        print("   Connection-specific DNS Suffix  . :")
-        print("")
-        print("Ethernet adapter Bluetooth Network Connection:")
-        print("")
-        print("   Media State . . . . . . . . . . . : Media disconnected")
-        print("   Connection-specific DNS Suffix  . :")
-        print("")
-        print("Wireless LAN adapter Wi-Fi:")
-        print("")
-        print("   Media State . . . . . . . . . . . : Media disconnected")
-        print("   Connection-specific DNS Suffix  . : VRZN-NT320")
-        print("")
+
     elif cmd == 'fc':
         compare1 = input("First file to compare: ")
         compare2 = input("Second file to compare: ")
@@ -407,98 +369,14 @@ while True:
         print("Loading...")
         time.sleep(10)
         print("")
-        print("Host Name:                 eopMachine", (sys_serial))
-        print("OS Name:                   eopDOS v0.4")
-        print("OS Version:                v0.4")
-        print("OS Manufacturer:           eyx")
-        print("System Manufacturer:       eopDOS")
-        print("System Type:               32-bit Virtual Machine")
-        print("Processor(s):              1 Processor(s) Installed.")
-        print("eopDOS Directory:          C:\EOPDOS_V0.4.PY")
-        print("System Directory:          C:\EOPDOS_V0.4.PY")
-        print("System Locale:             en-us;English (United States)")
-        print("Input Locale:              en-us;English (United States)")
-        print("Total Physical Memory:     !Drive Error: 1101")
-        print("Available Physical Memory: !Drive Error: 1101")
+        print("Host Name:                 Local User", (sys_serial))
+        print("OS Name:                   ChipOS v0.1")
+        print("OS Version:                v0.1")
+        print("OS Manufacturer:           Squirrel Computers")
+        print("System Manufacturer:       Squirrel Computers")
         print("")
 
-    elif cmd[0:6] == 'verify':
-        if cmd[7:] == '':
-            if verify_file == False:
-                print("Off")
-            else:
-                print("On")
-        if cmd[7:] == '[on]':
-            verify_file = True
-        elif cmd[7:] == '[off]':
-            verify_file = False
-        print()
         
-
-
-    elif cmd == 'diskutil':
-        print()
-        print("eopDOS Disk Utility version 1.0")
-        print()
-        print("Copyright (c) eyx under the MIT License")
-        print("On computer: eopMachine", (sys_serial),sep="-")
-        print()
-        while True:
-            diskpart_cmd = input("DISKUTIL>")
-            if diskpart_cmd == 'list disk':
-                print("No physical disk(s) found on this computer.")
-                print()
-            elif diskpart_cmd == 'list volume':
-                print("No physical volume(s) found on this computer.")
-                print()
-            elif diskpart_cmd == 'list partition':
-                print("No partitions found.")
-                print()
-            elif diskpart_cmd == 'list vdisk':
-                print()
-                print("Disk #    Status    Free")
-                print("-------   --------  -------")
-                print("Disk 0    Online    !Drive Error: 1101")
-                print("FDisk 1   Online    N/A")
-                print()
-            elif diskpart_cmd == 'help':
-                print("list disk: list the physical disks connected")
-                print("list volume: list the physical volumes connected")
-                print("list partition: list the physical partitions on disks")
-                print("list vdisk: list the virtual disks connected")
-                print("exit: leave this program")
-                print()
-            elif diskpart_cmd == 'exit':
-                print()
-                break
-            else:
-                print("Command not found for .")
-                print()
-
-    elif cmd[0:8] == 'freedisk':
-        if cmd[9:] == 'C':
-            print("!Drive Error 1101")
-        elif cmd[9:] == 'A':
-            print("!Drive Error 1000")
-            print("This drive does not have any volumes.")
-        elif cmd[9:] == '':
-            print("Detecting for virtual drives...")
-            time.sleep(0.2)
-            print("Virtual drive in volume C found.")
-            print("!Drive Error 1101")
-        else:
-            print("Drive not found on system.")
-        print()
-
-    elif cmd[0:5] == 'label':
-        if cmd[6:7] == 'C':
-            disk_label = cmd[8:]
-        #test this
-        if cmd[6:7] == 'A':
-            print("SystemError 1001: This device's name is locked by the system.")
-        else:
-            print("Disk not found.")
-        print()
 
     elif cmd[0:6] == "python":
             exec(cmd[7:])
@@ -509,28 +387,20 @@ while True:
             
     elif cmd == 'help':
         #TODO
-        print("To start a program, type in the application name.")
         print("dir: print directory")
         print("fdisksys: start the virtual floppy disk system")
-        print("chkdsk /f /r: checks disk for errors")
-        print("ping: check if a particular web host is reachable")
-        print("ipconfig: configure ip")
         print("systeminfo: prints system information")
         print("fc: compare files")
-        print("freedisk <drive letter>: checks how much storage is available on this disk")
         print("cd: change directory")
         print("echo: change output string")
         print("chdir: change directory")
         print("cls: clear terminal")
-        print("label <drive letter> <new label>: changes the disk label")
         print("hostname: print system name")
         print("python <code>: execute python code")
         print("ver: print version")
-        print("verify [on | off]: tells eopDOS to verify files on the disk")
-        print("exit: exit shell")
         print("")
     else:
         print((cmd), "is not recognized as an internal or")
-        print("external command, operable program or batch file.")
+        print("external command.")
         print("")
         
