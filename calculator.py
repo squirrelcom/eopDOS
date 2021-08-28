@@ -1,6 +1,6 @@
 print()
 import math
-print("eopDOS Calculator version 1.0")
+print("ChipOS Calculator version 1.0")
 print("""Type "/exit" to exit this program.""")
 print()
 while True:
